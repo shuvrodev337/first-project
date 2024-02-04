@@ -59,3 +59,28 @@
 // Select body->raw->json, then edit the json body, {"student": json dummy object}
 
 // *****Add Mongodb atlas  to compass-> get the DATABASE_URL from .env, save the url, and then connect.
+
+// ----------------------------------------End module-------------------------------------------//
+
+// *****Validation
+
+// -- When we send data from client(by react/vue/postman)-->
+//     Mongoose receives the data,it starts mapping the data with the model.(Object Data Modeling/ ODM Library)
+//     If the data is valid, it allows to keep the data on mongodb with the help of mongodb drivers behind the scene.
+//     Mongoose validates the data. Sometimes we need to validate the data again. Ex: correct validation of email / number  etc.
+
+// 3 ways to validate data with Mongoose
+
+// built in validation provided by Mongoose -> https://mongoosejs.com/docs/validation.html
+// custom validation by custom function
+// popular validation library (ex: ZOD,ZOI)
+
+// These re the popular validators:
+
+// 1. validator -> https://www.npmjs.com/package/validator , doc-> https://github.com/validatorjs/validator.js
+//  $ npm i validator
+//  dt => as this package does not come with type library support , we will have to install it as dev dependency, cause in real life at project, we will need only javascript=> $ npm i -D @types/validator
+
+// 2. joi -> https://www.npmjs.com/package/joi ,  Doc->https://joi.dev/api/
+// joi provides a  schema , that we can define.
+// we have to use it in controller

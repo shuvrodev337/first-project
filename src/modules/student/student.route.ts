@@ -4,7 +4,8 @@ import { StudentController } from './student.controller';
 
 const router = express.Router(); // gives router object ,so that we can apply get,post,patch,put,delete on that object
 
-//  '/api/v1/students' is the root route for student related routes.
+//  '/api/v1/students' is the root route for student related routes
+//  Here we can handle get/post/patch/put/delete requests.
 
 //  When client hit post request at '/api/v1/students/create-student', will call the createStudent controller function,
 router.post('/create-student', StudentController.createStudent);

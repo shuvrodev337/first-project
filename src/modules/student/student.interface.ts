@@ -1,8 +1,6 @@
 // Doc-  https://mongoosejs.com/docs/typescript.html
 // Interface -> Schema -> Model -> DbQuery
 
-import { Schema, model, connect } from 'mongoose';
-
 // 1. Create types/ interface representing a document in MongoDB.
 
 // Sub types
@@ -22,7 +20,7 @@ export type Guardian = {
 
 export type LocalGuardian = {
   name: string;
-  ocpation: string;
+  occupation: string;
   contactNo: string;
   address: string;
 };
