@@ -16,4 +16,8 @@ router.get('/', StudentController.getAllStudents);
 // When client hit get request at 'api/v1/students/:studentId' , will call the getSingleStudent controller function
 router.get('/:studentId', StudentController.getSingleStudent);
 
+// When client hit delete request at 'api/v1/students/:studentId' , will call the deleteStudent controller function
+
+router.delete('/:studentId', StudentController.deleteStudent);
+
 export const StudentRoutes = router; // Do not need to send in an object, bcz router itself is an object

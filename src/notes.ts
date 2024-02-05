@@ -79,8 +79,46 @@
 
 // 1. validator -> https://www.npmjs.com/package/validator , doc-> https://github.com/validatorjs/validator.js
 //  $ npm i validator
-//  dt => as this package does not come with type library support , we will have to install it as dev dependency, cause in real life at project, we will need only javascript=> $ npm i -D @types/validator
+//  dt => as this package does not come with type library support , we will have to install it's library as dev dependency, cause in real life at project, we will need only javascript=> $ npm i -D @types/validator
 
 // 2. joi -> https://www.npmjs.com/package/joi ,  Doc->https://joi.dev/api/
 // joi provides a  schema , that we can define.
-// we have to use it in controller
+// we have to use it in controller to validate the data we get from client
+
+// But we will use =>
+// 3. Zod -> Zod is a TypeScript-first schema declaration and validation library. The term "schema" to broadly refer to any data type, from a simple string to a complex nested object.
+
+// Zod Basic usage/ Doc -> https://zod.dev/?id=basic-usage
+// Zod can automatically infer types, so do not need to declare types/interfaces.
+
+// -----end---
+
+// Mongoose static and instance method DOc=> https://mongoosejs.com/docs/typescript/statics-and-methods.html
+
+// Mongoose have --> 1.Built in static method
+//                     ex: StudentModel.create()
+
+//                   2.Built in instance method
+//                     ex: const student = new StudentModel();
+//                          student.save()
+
+// We can add custom made Satatic method -> Schema-> statics property-> custom made static  method
+// We can add custom made Instance method -> Schema-> methods property-> custom made instance method
+
+// ------end-----
+
+// Mongoose middlwares/ mongoose hooks-> document middleware, query middleware, aggregation middleware
+// so that we can modify/ work  pre/post ( before/ after)  documents save/query/aggregation
+
+// bycript -> A library to help you hash passwords, needs additional ts support. this package does not come with type library support , we will have to install it's library as dev dependency
+// https://www.npmjs.com/package/bcrypt
+// npm i bcrypt
+// npm i -D @types/bcrypt
+
+// refferences of 'this' in different middlewares
+// document middleware = current document
+// query middleware = current query
+// aggregate middleware = current pipeline
+
+// Mongoose virtuals -> We can give an data that is not in our db, but derived from our db, by using mongoose virtuals
+// The  purpose of virtuals-> To create virtual documents that exist only in memory, not in the database.
